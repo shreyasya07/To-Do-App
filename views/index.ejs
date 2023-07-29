@@ -1,0 +1,33 @@
+<%- include("header.ejs") %>
+<div class="content">
+
+  <section class="disp-bar">
+    <%
+    var objToday = new Date(),
+    weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
+    dayOfWeek = weekday[objToday.getDay()],
+    domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
+    dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+    months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
+    curMonth = months[objToday.getMonth()],
+    curYear = objToday.getFullYear();
+    var today = dayOfWeek + ", " + curMonth + " " + dayOfMonth + " " + curYear;
+    %>
+  <h2><%= today %></h2>
+</section>
+<section class="forms">
+  <% for(var i=0;i<newListItems.length;i++){ %>
+    <div class="item">
+      <input type="checkbox" name="check" class="strikethrough" value="1">
+      <label for="check" class="strikeThis">
+        <%= newListItems[i] %>
+      </label>
+    </div>
+    <%}%>
+    <form action="/" class="item" method="post">
+      <input type="text" id="new-task" name="item" placeholder="Enter new task" autocomplete="off"> 
+      <button type="submit" name="list" class="btn btn-success">+</button>
+    </form>
+  </section>
+</div>
+<%- include("footer.ejs") %>

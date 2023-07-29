@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.disp-bar{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 600px;
+    margin-right: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    background-color: plum;
+    border-radius: 15px;
+    padding-top: 5px;
+}
+.disp-bar h2{
+    color: white;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 600px;
+    margin-right: 600px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 3rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn{
+    border-radius: 50%;
+    /* font-size: 1.4rem; */
+}
+#new-task{
+    width: 90%;
+    border: none;
+    text-align: center;
+}
+#new-task::placeholder{
+    padding: 4rem;
+    text-align: center;
+}
+.item-text{
+    width: 90%;
+    border: none;
+}
+#new-task-submit{
+    font-size: 1rem;
+}
+.strikeThis{
+    width: 90%;
+    text-align: center;
+    font-size: 1.7rem;
+}
+.item-text p{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 1.2rem;
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    color: blueviolet;
+    font-weight: bold;
+}
+.nav-link{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.strikethrough:checked + .strikeThis {
+    text-decoration: line-through
+}
+footer{
+    position:relative;
+    width:100%;
+    z-index:501;
+    clear:both;
+}
+footer p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
